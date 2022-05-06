@@ -1,4 +1,39 @@
 <div class="test">
-    <p>home works!</p>
-    <h1>ádsadsadas</h1>
+    <p>Test</p>
+    <h1>City Tour</h1>
+    
+  <!-- <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Sale Off</th>
+    </tr>
+    <tr *ngFor="let trai of fruit2; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{trai.name}}</td>
+      <td>
+          <span [ngClass]="{'negative': trai.price<0}">{{trai.price|currency:"USD":"symbol":"1.2"}}</span>
+      </td>
+      <td>
+          <span>{{trai.saleoff | onSale}}</span>
+      </td>
+    </tr>
+  </table> -->  
+Tỉnh/Thành phố:
+<select id="city" (change)="changeCity($event)">
+  <option *ngFor="let data of VietNameData" value="{{data.city}}">
+    {{data.city}}
+  </option>
+</select>
+<br/>
+Quận/Huyện:
+<select id="district" >
+  <option *ngFor="let district of districts" value="{{district}}">
+    {{district}}
+  </option>
+</select>
 </div>
+<span>Counter = {{counter}}</span>
+<br/>
+<span>Counter ^ 2 = {{counterBinhPhuong}}</span>
